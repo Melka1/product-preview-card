@@ -1,3 +1,123 @@
+// font-family: 'Fraunces', serif;
+// font-family: 'Montserrat', sans-serif;
+
 * {
     box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 38%, 92%);
+}
+.type , .desc {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+.name, .price--now {
+    font-family: 'Fraunces', serif;
+}
+.card--holder {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    .card--image{
+        content: url("./images/image-product-desktop.jpg");
+        width: 300px;
+        border-top-left-radius:15px;
+        border-bottom-left-radius:15px;
+    }
+    .desc--block {
+        display: flex;
+        flex-direction: column;
+        border-top-right-radius:15px;
+        border-bottom-right-radius:15px;
+        padding: 40px;
+        background-color: white;
+        justify-content: center;
+    }
+    .desc {
+        font-size: 0.8rem;
+    }
+    .type {
+        font-size: 0.8rem;
+        margin: 0;
+        letter-spacing: 5px;
+    }
+    .name {
+        color: hsl(212, 21%, 14%);
+    }
+    .prices {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-bottom: 15px;
+        * {
+            // border: 1px solid;
+            color:hsl(158, 36%, 37%);
+            margin: 0;
+            padding: 10px;
+        }
+        .price--now {
+            font-size: 30px;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .price--then{
+            text-decoration: line-through;
+            font-size: 12px;
+            margin-left: 0;
+        }
+    }
+    .add-to-cart {
+        width: 100%;
+        padding: 15px 0;
+        font-family: 'Montserrat', sans-serif;
+        border-radius: 10px;
+        border: none;
+        color: white;
+        background-color: hsl(158, 36%, 37%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        &:hover {
+           background-color:  hsl(145, 76%, 11%);
+        }
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:375px){
+    body {
+        height: initial;
+    }
+    .card--holder{
+        width: 100%;
+        flex-direction: column;
+        padding: 20px 10px;
+        .card--image {
+            content: url("./images/image-product-mobile.jpg");
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 0px;
+            height: 245px;
+            width: 100%;
+        } 
+        .desc--block {
+            padding: 15px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 15px;
+        }
+        .name {
+            margin: 10px 0;
+        }
+        .desc {
+            font-size: 0.9rem;
+        }
+    }
 }

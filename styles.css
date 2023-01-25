@@ -1,3 +1,123 @@
 * {
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.type, .desc {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228deg, 12%, 48%);
+}
+
+.name, .price--now {
+  font-family: "Fraunces", serif;
+}
+
+.card--holder {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+}
+.card--holder .card--image {
+  content: url("./images/image-product-desktop.jpg");
+  width: 300px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.card--holder .desc--block {
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 40px;
+  background-color: white;
+  justify-content: center;
+}
+.card--holder .desc {
+  font-size: 0.8rem;
+}
+.card--holder .type {
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 5px;
+}
+.card--holder .name {
+  color: hsl(212deg, 21%, 14%);
+}
+.card--holder .prices {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+.card--holder .prices * {
+  color: hsl(158deg, 36%, 37%);
+  margin: 0;
+  padding: 10px;
+}
+.card--holder .prices .price--now {
+  font-size: 30px;
+  margin-left: 0;
+  padding-left: 0;
+}
+.card--holder .prices .price--then {
+  text-decoration: line-through;
+  font-size: 12px;
+  margin-left: 0;
+}
+.card--holder .add-to-cart {
+  width: 100%;
+  padding: 15px 0;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: hsl(158deg, 36%, 37%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.card--holder .add-to-cart:hover {
+  background-color: hsl(145deg, 76%, 11%);
+}
+.card--holder .add-to-cart img {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    height: initial;
+  }
+  .card--holder {
+    width: 100%;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .card--holder .card--image {
+    content: url("./images/image-product-mobile.jpg");
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    height: 245px;
+    width: 100%;
+  }
+  .card--holder .desc--block {
+    padding: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+  }
+  .card--holder .name {
+    margin: 10px 0;
+  }
+  .card--holder .desc {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
